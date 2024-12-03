@@ -1,8 +1,25 @@
-# React + Vite
+Features
+User Context Provider:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Centralized state management for user data.
+Provides a shared users state to all components.
+Allows adding new users dynamically.
+Role-Based User Management:
 
-Currently, two official plugins are available:
+Includes users with predefined roles: Admin, Super User, and User.
+Custom Hook:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Provides an easy way to access user data using useUsers().
+Code Overview
+1. UserContext
+A Context to manage and provide user data across the application.
+2. UserProvider Component
+Wraps the application and shares users state and addUser function with its children.
+3. useUsers Hook
+Simplifies access to UserContext.
+
+
+ID's and Password to access the different roles and designations:-
+{ id: "admin1", password: "admin123", role: "Admin" },
+{ id: "superuser1", password: "superuser123", role: "Super User" },
+{ id: "user1", password: "user123", role: "User" },
